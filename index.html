@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Giảng Tương Tác: Luyện IELTS Writing Task 1 - Line Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .lesson-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        .slide-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .slide-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        .chart-image {
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        .interactive-section textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            resize: vertical;
+            transition: all 0.2s ease;
+        }
+        .interactive-section textarea:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+        .button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover:enabled {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .quiz-check-button {
+            background-color: #dc2626;
+            color: white;
+        }
+        .quiz-check-button:hover:enabled {
+            background-color: #b91c1c;
+        }
+        .lesson-nav-button {
+            background-color: #48bb78;
+            color: white;
+        }
+        .lesson-nav-button:hover:enabled {
+            background-color: #38a169;
+        }
+        .correct-answer-box {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            font-weight: 600;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        .final-message {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .restart-button {
+            background-color: #f6ad55;
+            color: white;
+            margin-top: 1rem;
+        }
+        .restart-button:hover:enabled {
+            background-color: #ed8936;
+        }
+    </style>
+</head>
+<body>
+    <div class="lesson-container">
+        <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-6">Bài Giảng Tương Tác: Luyện IELTS Writing Task 1 - Line Chart</h1>
+
+        <div id="lesson-slides">
+            <div id="slide-0" class="lesson-slide">
+                <h2 class="slide-title">Slide 1: Giới thiệu</h2>
+                <p class="slide-content">Chào mừng bạn đến với 20 bài luyện tập chuyên sâu về dạng bài **Line Chart** trong IELTS Writing Task 1. Mỗi slide sẽ có một biểu đồ và một câu tiếng Việt để bạn thực hành viết lại bằng tiếng Anh.</p>
+                <p class="slide-content">Hãy cố gắng sử dụng từ vựng đa dạng và cấu trúc câu linh hoạt để bài viết của mình đạt điểm cao nhé!</p>
+            </div>
+
+            <div id="slide-1" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 2: Bài luyện tập 1</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy doanh số bán sách từ năm 2000 đến 2010. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Sales+Line+Graph+1" alt="Line Graph 1" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Nhìn chung, doanh số bán sách đã tăng đáng kể trong suốt giai đoạn này.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-1" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="1">Kiểm Tra</button>
+                    <div id="feedback-1" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>Overall, the sales of books saw a significant increase throughout the period.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-2" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 3: Bài luyện tập 2</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy tỷ lệ thất nghiệp ở một quốc gia từ 2005 đến 2015. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Unemployment+Line+Graph+2" alt="Line Graph 2" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Tỷ lệ thất nghiệp đã giảm mạnh từ 10% xuống 5% trong giai đoạn này.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-2" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="2">Kiểm Tra</button>
+                    <div id="feedback-2" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The unemployment rate dropped dramatically from 10% to 5% during this period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-3" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 4: Bài luyện tập 3</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy giá xăng từ 2010 đến 2014. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Gasoline+Price+Line+Graph+3" alt="Line Graph 3" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Giá xăng đã dao động nhẹ trước khi ổn định vào cuối giai đoạn.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-3" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="3">Kiểm Tra</button>
+                    <div id="feedback-3" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The price of gasoline fluctuated slightly before levelling off at the end of the period.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-4" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 5: Bài luyện tập 4</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số lượng khách du lịch đến 2 thành phố. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Tourism+Line+Graph+4" alt="Line Graph 4" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Lượng khách du lịch đến Thành phố A đã tăng đáng kể, vượt qua Thành phố B vào năm 2015.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-4" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="4">Kiểm Tra</button>
+                    <div id="feedback-4" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of tourists to City A saw a significant increase, overtaking City B in 2015.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-5" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 6: Bài luyện tập 5</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số người sở hữu điện thoại thông minh ở một quốc gia. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Smartphone+Ownership+5" alt="Line Graph 5" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số người sở hữu điện thoại thông minh đã tăng đều đặn từ 20% lên 80% từ năm 2000 đến 2020.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-5" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="5">Kiểm Tra</button>
+                    <div id="feedback-5" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of people who owned a smartphone increased steadily from 20% to 80% between 2000 and 2020.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-6" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 7: Bài luyện tập 6</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy sản lượng lúa mì của 3 khu vực. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Wheat+Production+6" alt="Line Graph 6" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Trong suốt giai đoạn, sản lượng lúa mì của Khu vực C luôn thấp nhất.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-6" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="6">Kiểm Tra</button>
+                    <div id="feedback-6" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>Throughout the period, the production of wheat in Region C was consistently the lowest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-7" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 8: Bài luyện tập 7</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy giá cà phê từ 2010 đến 2020. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Coffee+Price+7" alt="Line Graph 7" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Giá cà phê đạt đỉnh 5 USD vào năm 2015 trước khi giảm mạnh.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-7" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="7">Kiểm Tra</button>
+                    <div id="feedback-7" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The price of coffee peaked at $5 in 2015 before plummeting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-8" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 9: Bài luyện tập 8</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số giờ xem TV trung bình mỗi tuần. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=TV+Hours+8" alt="Line Graph 8" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số giờ xem TV trung bình mỗi tuần giảm nhẹ trong những năm gần đây.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-8" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="8">Kiểm Tra</button>
+                    <div id="feedback-8" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The average number of hours spent watching TV per week experienced a slight decline in recent years.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-9" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 10: Bài luyện tập 9</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số lượng học sinh học tiếng Tây Ban Nha và Pháp. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Language+Students+9" alt="Line Graph 9" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Trong khi số học sinh học tiếng Tây Ban Nha tăng, số học sinh học tiếng Pháp giảm.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-9" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="9">Kiểm Tra</button>
+                    <div id="feedback-9" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>While the number of students learning Spanish increased, the figure for French students decreased.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-10" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 11: Bài luyện tập 10</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số người đi lại bằng tàu hỏa và xe buýt. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Commuters+10" alt="Line Graph 10" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số người đi lại bằng tàu hỏa và xe buýt có xu hướng đối lập nhau.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-10" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="10">Kiểm Tra</button>
+                    <div id="feedback-10" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of people commuting by train and bus showed contrasting trends.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-11" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 12: Bài luyện tập 11</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy giá nhà trung bình. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=House+Price+11" alt="Line Graph 11" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Giá nhà trung bình tăng từ 100,000 USD lên 250,000 USD trong 10 năm.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-11" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="11">Kiểm Tra</button>
+                    <div id="feedback-11" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The average house price increased from $100,000 to $250,000 over a ten-year period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-12" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 13: Bài luyện tập 12</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số lượng thành viên của một câu lạc bộ. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Club+Members+12" alt="Line Graph 12" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số lượng thành viên của câu lạc bộ đã đạt mức thấp nhất vào năm 2012.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-12" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="12">Kiểm Tra</button>
+                    <div id="feedback-12" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of club members hit its lowest point in the year 2012.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-13" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 14: Bài luyện tập 13</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy doanh thu của 2 công ty. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Company+Revenue+13" alt="Line Graph 13" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Doanh thu của Công ty A luôn cao hơn Công ty B trong toàn bộ giai đoạn.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-13" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="13">Kiểm Tra</button>
+                    <div id="feedback-13" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The revenue of Company A remained higher than Company B's throughout the entire period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-14" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 15: Bài luyện tập 14</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số lượng ô tô được sản xuất. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Car+Production+14" alt="Line Graph 14" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số lượng ô tô được sản xuất đã tăng gấp đôi từ 500,000 lên 1 triệu chiếc vào năm 2020.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-14" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="14">Kiểm Tra</button>
+                    <div id="feedback-14" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of cars produced doubled from 500,000 to one million in 2020.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-15" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 16: Bài luyện tập 15</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy nhiệt độ trung bình hàng tháng. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Temperature+15" alt="Line Graph 15" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Nhiệt độ trung bình đạt đỉnh vào mùa hè và giảm xuống mức thấp nhất vào mùa đông.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-15" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="15">Kiểm Tra</button>
+                    <div id="feedback-15" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The average temperature peaked in the summer months and fell to its lowest point in winter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-16" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 17: Bài luyện tập 16</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy giá cổ phiếu của một công ty. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Stock+Price+16" alt="Line Graph 16" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Giá cổ phiếu tăng dần trong nửa đầu giai đoạn, sau đó giảm đột ngột.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-16" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="16">Kiểm Tra</button>
+                    <div id="feedback-16" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The stock price increased gradually in the first half of the period, then experienced a sudden drop.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-17" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 18: Bài luyện tập 17</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy chi tiêu của chính phủ cho giáo dục và y tế. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Government+Spending+17" alt="Line Graph 17" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Chi tiêu cho giáo dục luôn cao hơn chi tiêu cho y tế.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-17" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="17">Kiểm Tra</button>
+                    <div id="feedback-17" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>Spending on education consistently surpassed that on healthcare.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-18" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 19: Bài luyện tập 18</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy số lượng xe đạp và ô tô được bán ra. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Bikes+Cars+18" alt="Line Graph 18" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Số lượng xe đạp bán ra đã tăng đáng kể, trong khi số ô tô bán ra giảm.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-18" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="18">Kiểm Tra</button>
+                    <div id="feedback-18" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The number of bicycles sold increased significantly, whereas the figure for cars declined.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-19" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 20: Bài luyện tập 19</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy tỷ lệ người trẻ tuổi sử dụng mạng xã hội. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Social+Media+19" alt="Line Graph 19" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Tỷ lệ người trẻ tuổi sử dụng mạng xã hội đã tăng dần trong giai đoạn này.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-19" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="19">Kiểm Tra</button>
+                    <div id="feedback-19" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The proportion of young people using social media grew steadily throughout the period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-20" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 21: Bài luyện tập 20</h2>
+                <p class="slide-content font-semibold text-blue-800">Biểu đồ dưới đây cho thấy giá điện và gas ở một thành phố. Hãy viết lại câu sau:</p>
+                <img src="https://placehold.co/600x300/e0e0e0/000000?text=Energy+Price+20" alt="Line Graph 20" class="chart-image">
+                <p class="slide-content mt-4 font-bold">Câu tiếng Việt: Giá điện và gas có xu hướng tương tự nhau trong 10 năm qua.</p>
+                <div class="interactive-section mt-4">
+                    <textarea id="answer-20" placeholder="Hãy viết câu trả lời của bạn ở đây..."></textarea>
+                    <button class="button quiz-check-button mt-4" data-quiz-id="20">Kiểm Tra</button>
+                    <div id="feedback-20" class="correct-answer-box hidden">
+                        <p class="font-bold">Đáp án gợi ý:</p>
+                        <p>The prices of electricity and gas followed a similar pattern over the past decade.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="final-screen" class="lesson-slide hidden">
+                <h2 class="slide-title">Hoàn Thành Bài Giảng!</h2>
+                <p class="final-message">🎉 Chúc mừng! Bạn đã hoàn thành 20 bài luyện tập về IELTS Writing Task 1 Line Chart.</p>
+                <button id="restart-lesson-button" class="button restart-button w-full mt-8">Học Lại Bài Giảng</button>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-8">
+            <button id="prev-slide-button" class="button lesson-nav-button" disabled>Slide Trước</button>
+            <span id="slide-indicator" class="text-lg font-semibold text-gray-700">Slide 1 / 21</span>
+            <button id="next-slide-button" class="button lesson-nav-button">Slide Tiếp Theo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.lesson-slide');
+        const prevButton = document.getElementById('prev-slide-button');
+        const nextButton = document.getElementById('next-slide-button');
+        const slideIndicator = document.getElementById('slide-indicator');
+        const restartLessonButton = document.getElementById('restart-lesson-button');
+        const totalLessonSlides = slides.length - 1;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.add('hidden');
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                }
+            });
+
+            prevButton.disabled = (index === 0);
+            
+            if (index < totalLessonSlides) {
+                nextButton.classList.remove('hidden');
+            } else {
+                nextButton.classList.add('hidden');
+            }
+
+            if (index < totalLessonSlides) {
+                slideIndicator.textContent = `Slide ${index + 1} / ${totalLessonSlides}`;
+            } else {
+                slideIndicator.textContent = `Hoàn thành!`;
+            }
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlideIndex < totalLessonSlides) {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        restartLessonButton.addEventListener('click', () => {
+            currentSlideIndex = 0;
+            showSlide(currentSlideIndex);
+            document.querySelectorAll('.interactive-section textarea').forEach(textarea => {
+                textarea.disabled = false;
+                textarea.value = '';
+            });
+            document.querySelectorAll('.correct-answer-box').forEach(box => {
+                box.classList.add('hidden');
+            });
+            document.querySelectorAll('.quiz-check-button').forEach(button => {
+                button.disabled = false;
+            });
+        });
+
+        document.querySelectorAll('.quiz-check-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const quizId = e.target.dataset.quizId;
+                const feedbackDiv = document.getElementById(`feedback-${quizId}`);
+                
+                feedbackDiv.classList.remove('hidden');
+                e.target.disabled = true;
+                
+                // Disable the textarea to prevent further edits after checking
+                document.getElementById(`answer-${quizId}`).disabled = true;
+            });
+        });
+
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
